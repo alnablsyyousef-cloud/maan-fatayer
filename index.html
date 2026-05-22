@@ -3,277 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المساحة الرقمية لـ معن فطاير</title>
+    <title>مَعْن فَطَايِر | المساحة الرقمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --accent-color: #58a6ff;
-            --text-color: #c9d1d9;
-            --text-glow: #ffffff;
-            --yt-color: #ff0000;
-            --mail-color: #4285f4;
-            --fb-color: #1877f2;
-            --x-color: #e1e3e6;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 500px;
-            padding: 40px 20px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        .profile-header h1 {
-            font-size: 2.4rem;
-            color: var(--text-glow);
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
-            font-weight: 700;
-        }
-
-        .profile-header p {
-            font-size: 1.05rem;
-            color: #8b949e;
-            margin-bottom: 35px;
-            line-height: 1.6;
-        }
-
-        .section-title {
-            font-size: 1.25rem;
-            color: var(--accent-color);
-            margin: 30px 0 15px 0;
-            text-align: right;
-            border-bottom: 1px solid #30363d;
-            padding-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .links-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .link-card {
-            background-color: var(--card-bg);
-            border: 1px solid #30363d;
-            border-radius: 14px;
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .link-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .link-card.youtube:hover { border-color: var(--yt-color); box-shadow: 0 0 15px rgba(255, 0, 0, 0.25); }
-        .link-card.email:hover { border-color: var(--mail-color); box-shadow: 0 0 15px rgba(66, 133, 244, 0.25); }
-        .link-card.facebook:hover { border-color: var(--fb-color); box-shadow: 0 0 15px rgba(24, 119, 242, 0.25); }
-        .link-card.x-twitter:hover { border-color: #8b949e; box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); }
-
-        .link-card i { font-size: 1.6rem; margin-left: 15px; width: 30px; text-align: center; }
-        .youtube i { color: var(--yt-color); }
-        .email i { color: var(--mail-color); }
-        .facebook i { color: var(--fb-color); }
-        .x-twitter i { color: var(--x-color); }
-
-        .link-text { font-size: 1.1rem; font-weight: 500; }
-
-        .content-box {
-            background-color: var(--card-bg);
-            border: 1px solid #30363d;
-            border-radius: 14px;
-            padding: 22px;
-            text-align: right;
-            line-height: 1.8;
-            font-size: 1.05rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            white-space: pre-line;
-        }
-
-        .admin-panel {
-            display: none;
-            background-color: #1c2128;
-            border: 2px dashed var(--accent-color);
-            border-radius: 14px;
-            padding: 20px;
-            margin-top: 30px;
-            text-align: right;
-        }
-
-        .admin-panel h3 { margin-top: 0; color: #fff; }
-
-        .admin-input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #22272e;
-            border: 1px solid #444c56;
-            color: #fff;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-family: inherit;
-        }
-
-        .admin-btn {
-            background-color: #347d39;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            width: 100%;
-        }
-
-        .admin-btn:hover { background-color: #46954a; }
-
-        footer {
-            margin-top: auto;
-            padding: 25px;
-            color: #8b949e;
-            font-size: 0.9rem;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-            border-top: 1px solid #30363d;
-            background-color: #090c10;
-        }
-
-        .secret-trigger {
-            background: none;
-            border: none;
-            color: #21262d;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-        .secret-trigger:hover { color: var(--accent-color); }
+        :root { --accent-color: #58a6ff; }
+        body { margin: 0; padding: 0; background-color: #050505; color: #c9d1d9; font-family: 'Noto Kufi Arabic', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .main-container { width: 90%; max-width: 500px; background: rgba(22, 27, 34, 0.67); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8); }
+        .header-glass { padding: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 30px; }
+        h1 { color: #fff; font-size: 2rem; margin: 0; }
+        p { color: #8b949e; margin-top: 10px; }
+        .links-container { display: flex; flex-direction: column; gap: 15px; }
+        .link-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 12px; color: #fff; text-decoration: none; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .link-btn:hover { background: var(--accent-color); transform: translateY(-2px); }
+        .qr-section { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .qr-section img { background: #fff; padding: 10px; border-radius: 10px; width: 150px; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="profile-header">
-            <h1 id="display-name">مَعْن فَطَايِر</h1>
-            <p>المساحة الرقمية الخاصة للخواطر، القصائد، والمعلومات العامة</p>
-        </div>
-
-        <div class="section-title">
-            <i class="fa-solid fa-circle-nodes"></i> مَعَرِّفَاتِي وَرَوَابِطِي الرَّقْمِيَّةِ
-        </div>
-        
-        <div class="links-container">
-            <a href="mailto:alnablsyyousef@gmail.com" class="link-card email">
-                <i class="fa-solid fa-envelope"></i>
-                <span class="link-text">البريد الإلكتروني</span>
-            </a>
-
-            <a href="https://youtube.com/@maanfatayer2105?si=DPQ8UQ-tlpIlebIC" target="_blank" class="link-card youtube">
-                <i class="fa-brands fa-youtube"></i>
-                <span class="link-text">قناة اليوتيوب</span>
-            </a>
-
-            <a href="https://www.facebook.com/share/1D9H3s7Yjt/" target="_blank" class="link-card facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-                <span class="link-text">حسابي على فيس بوك</span>
-            </a>
-
-            <a href="https://x.com/AnFatayer99756" target="_blank" class="link-card x-twitter">
-                <i class="fa-brands fa-x-twitter"></i>
-                <span class="link-text">حسابي على X</span>
-            </a>
-        </div>
-
-        <div class="section-title">
-            <i class="fa-solid fa-feather-pointed"></i> فِي مَعْرِضِ الْخَاطِرِ
-        </div>
-
-        <div class="content-box" id="display-poem">
-            هنا تولد الكلمات الرقمية وتتسع لجمال حروفها العذبة، لتُعرض برونق متميز وفخم يجمع بين عراقة الأصالة ولمسات الحداثة المريحة للعين.
-        </div>
-
-        <div class="admin-panel" id="adminPanel">
-            <h3>⚙️ لوحة التعديل السريع للموقع</h3>
-            
-            <label>تعديل الإسم والحركات:</label>
-            <input type="text" id="input-name" class="admin-input" value="مَعْن فَطَايِر">
-            
-            <label>تعديل نص الخاطرة أو القصيدة:</label>
-            <textarea id="input-poem" class="admin-input" rows="5"></textarea>
-            
-            <button class="admin-btn" onclick="updateWebsiteContent()">حفظ التعديلات فورًا ✨</button>
-        </div>
+<div class="main-container">
+    <div class="header-glass">
+        <h1>مَعْن فَطَايِر</h1>
+        <p>المساحة الرقمية الخاصة للخواطر والمعلومات</p>
     </div>
 
-    <footer>
-        جميع الحقوق محفوظة &copy; مَعْن فَطَايِر 2026 
-        <button class="secret-trigger" onclick="toggleAdminPanel()"><i class="fa-solid fa-gear"></i></button>
-    </footer>
+    <div class="links-container">
+        <a href="mailto:alnablsyyousef@gmail.com" class="link-btn"><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</a>
+        <a href="https://youtube.com/@maanfatayer2105?si=DPQ8UQ-tlpIlebIC" target="_blank" class="link-btn"><i class="fa-brands fa-youtube"></i> قناة اليوتيوب</a>
+        <a href="https://www.facebook.com/share/1D9H3s7Yjt/" target="_blank" class="link-btn"><i class="fa-brands fa-facebook-f"></i> حسابي على فيس بوك</a>
+        <a href="https://x.com/AnFatayer99756" target="_blank" class="link-btn"><i class="fa-brands fa-x-twitter"></i> حسابي على X</a>
+    </div>
 
-    <script>
-        window.onload = function() {
-            var savedName = localStorage.getItem('customName');
-            var savedPoem = localStorage.getItem('customPoem');
-            
-            if (savedName) {
-                document.getElementById('display-name').innerText = savedName;
-                document.getElementById('input-name').value = savedName;
-            }
-            if (savedPoem) {
-                document.getElementById('display-poem').innerText = savedPoem;
-                document.getElementById('input-poem').value = savedPoem;
-            } else {
-                document.getElementById('input-poem').value = document.getElementById('display-poem').innerText;
-            }
-        }
+    <div class="qr-section">
+        <p style="font-size: 0.8rem;">امسح للوصول السريع</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://alnablsyyousef-cloud.github.io/maan-fatayer/" alt="QR Code">
+    </div>
+</div>
 
-        function toggleAdminPanel() {
-            var panel = document.getElementById('adminPanel');
-            if (panel.style.display === 'none' || panel.style.display === '') {
-                panel.style.display = 'block';
-                panel.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                panel.style.display = 'none';
-            }
-        }
-
-        function updateWebsiteContent() {
-            var newName = document.getElementById('input-name').value;
-            var newPoem = document.getElementById('input-poem').value;
-            
-            document.getElementById('display-name').innerText = newName;
-            document.getElementById('display-poem').innerText = newPoem;
-            
-            localStorage.setItem('customName', newName);
-            localStorage.setItem('customPoem', newPoem);
-            
-            toggleAdminPanel();
-            alert('تم حفظ وتثبيت التعديلات بنجاح! 🎉');
-        }
-    </script>
 </body>
 </html>
