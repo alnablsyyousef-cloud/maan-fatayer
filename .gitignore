@@ -1,0 +1,11 @@
+# تجاهل ملفات النظام والبيانات المؤقتة
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+cache/
+node_modules/
+
+# تجاهل ملفات الإعدادات المحلية
+.vscode/
+.idea/
